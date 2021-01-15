@@ -34,6 +34,22 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
+                <form action="/action_page.php">
+                  <input list="browsers" name="browser">
+                  <datalist id="browsers">
+                    <option value="Personal">
+                    <option value="Food">
+                    <option value="Travel">
+                    <option value="Technology">
+                    <option value="Fashion">
+                    <option value="Movies">
+                    <option value="Politics">
+                    <option value="Gaming">
+                    <option value="Business">
+                    <option value="Sports">
+                  </datalist>
+                  <input type="submit" value="Search">
+                </form>
                 <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
